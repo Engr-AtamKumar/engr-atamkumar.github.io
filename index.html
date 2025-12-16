@@ -1,1305 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atam Kumar Menghwar | Industrial & Management Engineer</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS (Animations) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1e40af',
-            secondary: '#1e3a8a',
-            accent: '#3b82f6',
-            ink: '#0b1220'
-          },
-          boxShadow: {
-            soft: '0 12px 35px rgba(0,0,0,.08)',
-            soft2: '0 18px 55px rgba(0,0,0,.12)'
-          }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atam Kumar Menghwar - Portfolio</title>
+<style>
+    /* Global Styles */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        scroll-behavior: smooth;
+    }
+    a {
+        color: #0366d6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    h1, h2, h3, h4 {
+        color: #333;
+        margin: 0;
+    }
+    /* Header and Navigation */
+    header {
+        background: #ffffff;
+        border-bottom: 1px solid #ddd;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav-container {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+    }
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background: #0366d6;
+        color: #fff;
+    }
+    /* Banner */
+    .banner {
+        background: #fff;
+        padding: 100px 1rem 60px;
+        text-align: center;
+        margin-top: 60px;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .banner h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        color: #555;
+    }
+    .social-links a {
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+    }
+    .btn-contact {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: #0366d6;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn-contact:hover {
+        background: #024fa3;
+    }
+    /* Sections */
+    section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem 1rem;
+    }
+    section h2 {
+        border-bottom: 2px solid #0366d6;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    /* About */
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+    .about-text {
+        flex: 1;
+    }
+    .about-text p {
+        margin-bottom: 1rem;
+    }
+    /* Lists */
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+    /* Skills list as badges */
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .skill-badge {
+        background: #0366d6;
+        color: #fff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+    /* Projects */
+    .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .project-item {
+        flex: 1 1 calc(33% - 1rem);
+        background: #fff;
+        padding: 0.5rem;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .project-item img {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+    .project-item h3 {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+    @media (max-width: 800px) {
+        .project-item {
+            flex: 1 1 100%;
         }
-      }
     }
-  </script>
-
-  <style>
-    .gradient-text{
-      background: linear-gradient(90deg,#1e40af,#3b82f6);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+    /* Documents and Contact */
+    .documents-list li, .contact-info li {
+        margin-bottom: 0.5rem;
     }
-    .glass{
-      background: rgba(255,255,255,.75);
-      backdrop-filter: blur(10px);
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        font-size: 0.9rem;
+        margin-top: 2rem;
     }
-    .active-tab{
-      border-bottom: 3px solid #3b82f6;
-      color:#1e40af;
-      font-weight:700;
-    }
-    .skill-bar { width: 0%; transition: width 1.6s ease; }
-    @media (prefers-reduced-motion: reduce){ .skill-bar { transition:none !important; } }
-
-    /* nicer focus ring for inputs */
-    input:focus, textarea:focus { outline: none; }
-  </style>
+</style>
 </head>
+<body>
 
-<body class="bg-slate-50 text-slate-900 antialiased">
-
-  <!-- Top background decoration -->
-  <div class="pointer-events-none fixed inset-0 -z-10">
-    <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl"></div>
-    <div class="absolute top-10 right-0 h-72 w-72 rounded-full bg-indigo-400/20 blur-3xl"></div>
-    <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-sky-400/20 blur-3xl"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 border-b border-slate-200/60 glass">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold shadow-soft">
-            AK
-          </div>
-          <div>
-            <div class="font-extrabold text-slate-900 leading-tight">Atam Kumar Menghwar</div>
-            <div class="text-xs text-slate-600 -mt-0.5">Industrial &amp; Management Engineer</div>
-          </div>
-        </div>
-
-        <div class="hidden md:flex items-center gap-7 text-sm font-medium">
-          <a href="#about" class="text-slate-700 hover:text-primary">About</a>
-          <a href="#education" class="text-slate-700 hover:text-primary">Education</a>
-          <a href="#experience" class="text-slate-700 hover:text-primary">Experience</a>
-          <a href="#skills" class="text-slate-700 hover:text-primary">Skills</a>
-          <a href="#publications" class="text-slate-700 hover:text-primary">Publications</a>
-          <a href="#projects" class="text-slate-700 hover:text-primary">Projects</a>
-          <a href="#certifications" class="text-slate-700 hover:text-primary">Certifications</a>
-          <a href="#recommendations" class="text-slate-700 hover:text-primary">Recommendations</a>
-          <a href="#documents" class="text-slate-700 hover:text-primary">My Documents</a>
-          <a href="#contact" class="text-slate-700 hover:text-primary">Contact</a>
-        </div>
-
-        <button id="menu-btn" class="md:hidden p-2 rounded-xl hover:bg-slate-100">
-          <i data-feather="menu"></i>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <div class="grid grid-cols-2 gap-2 text-sm">
-          <a href="#about" class="px-3 py-2 rounded-xl hover:bg-slate-100">About</a>
-          <a href="#education" class="px-3 py-2 rounded-xl hover:bg-slate-100">Education</a>
-          <a href="#experience" class="px-3 py-2 rounded-xl hover:bg-slate-100">Experience</a>
-          <a href="#skills" class="px-3 py-2 rounded-xl hover:bg-slate-100">Skills</a>
-          <a href="#publications" class="px-3 py-2 rounded-xl hover:bg-slate-100">Publications</a>
-          <a href="#projects" class="px-3 py-2 rounded-xl hover:bg-slate-100">Projects</a>
-          <a href="#certifications" class="px-3 py-2 rounded-xl hover:bg-slate-100">Certifications</a>
-          <a href="#recommendations" class="px-3 py-2 rounded-xl hover:bg-slate-100">Recommendations</a>
-          <a href="#documents" class="px-3 py-2 rounded-xl hover:bg-slate-100">My Documents</a>
-          <a href="#contact" class="px-3 py-2 rounded-xl hover:bg-slate-100">Contact</a>
-        </div>
-      </div>
+<header>
+    <div class="nav-container">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#publications">Publications</a>
+            <a href="#projects">Projects</a>
+            <a href="#documents">My Documents</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#recommendations">Recommendations</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
-  </nav>
-
-  <!-- Hero -->
-<header class="pt-14 pb-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-
-      <!-- LEFT CONTENT -->
-      <div class="lg:col-span-7" data-aos="fade-right">
-
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 shadow-soft text-sm">
-          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-          Available for research collaboration • PhD applications
-        </div>
-
-        <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-          Hi, I’m <span class="gradient-text">Atam Kumar Menghwar</span>
-        </h1>
-
-        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
-          Industrial &amp; Management Engineer specializing in smart manufacturing, quality management,
-          and digital transformation with a passion for research and innovation.
-        </p>
-
-        <!-- HERO BUTTONS -->
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#contact"
-             class="px-6 py-3 rounded-2xl bg-primary text-white font-semibold shadow-soft hover:shadow-soft2 transition">
-            Contact Me
-          </a>
-
-          <a href="#research-focus"
-             class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-            Research Focus
-          </a>
-
-          <a href="#methodology"
-             class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-            Preferred Methodology
-          </a>
-        </div>
-
-      </div>
-      <!-- END LEFT CONTENT -->
-
-      <!-- RIGHT IMAGE -->
-      <div class="lg:col-span-5 flex justify-center lg:justify-end" data-aos="fade-left">
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/25 to-indigo-500/20 blur-2xl"></div>
-          <div class="relative bg-white p-2 rounded-[2rem] shadow-soft2 border border-slate-200">
-            <img src="atampc.jpeg"
-                 alt="Atam Kumar"
-                 class="w-80 h-80 rounded-[1.6rem] object-cover">
-          </div>
-        </div>
-      </div>
-      <!-- END RIGHT IMAGE -->
-
-    </div>
-  </div>
 </header>
 
-
-
-  <!-- Research Focus + Preferred Methodology (Professional layout) -->
-  <section class="pb-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
-        <div id="research-focus" class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="target" class="text-primary"></i>
-            </div>
-            <h2 class="text-xl font-extrabold">Research Focus</h2>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Causal Digital Twins for Sustainable Manufacturing</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Smart Manufacturing Systems (Industry 4.0 &amp; Industry 5.0)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Energy-Efficient and Sustainable Decision-Making</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Cyber-Physical Systems (CPS)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">AI-Driven Manufacturing Intelligence</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Causal Inference in Industrial Systems</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Digital Transformation of Manufacturing and Healthcare</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Predictive Maintenance and Remaining Useful Life (RUL)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Smart Healthcare Systems and Human–Digital Twins</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Digital Supply Chain Management and Logistics Optimization</span>
-          </div>
-        </div>
-
-        <div id="methodology" class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="sliders" class="text-primary"></i>
-            </div>
-            <h2 class="text-xl font-extrabold">Preferred Methodology</h2>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Causal Digital Twin Framework (CDTF) Development</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Real-Time Data Acquisition &amp; Time-Series Databases (TimescaleDB)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Data Visualization &amp; Monitoring (Grafana)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Machine Learning Models (XGBoost, Predictive Analytics)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Causal Modeling &amp; Inference Techniques</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Ordinary Least Squares (OLS) Regression</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Regression Diagnostics (Residual Analysis, Q–Q Plots, Histograms)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Multicollinearity Analysis (Variance Inflation Factor – VIF)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Autocorrelation Testing (Durbin–Watson Test)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Robust Estimation (Newey–West HAC Corrections)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Survey-Based Quantitative Research</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold">Statistical Analysis (Correlation, ANOVA, Regression Modeling)</span>
-          </div>
-        </div>
-      </div>
+<section class="banner" id="home">
+    <h1>Atam Kumar Menghwar</h1>
+    <h2>Industrial & Management Engineer specializing in smart manufacturing, quality management, and digital transformation</h2>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank" title="LinkedIn">🔗 LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=oL8h-7MAAAAJ&hl=en" target="_blank" title="Google Scholar">📚 Google Scholar</a>
     </div>
-  </section>
+    <a href="#contact" class="btn-contact">Contact Me</a>
+</section>
 
-  <!-- About -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">About <span class="gradient-text">Myself</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <div class="md:col-span-4 flex justify-center" data-aos="fade-right">
-          <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200 shadow-soft">
-            <img src="FH.jpeg" alt="Atam Kumar" class="rounded-2xl w-full max-w-xs object-cover">
-          </div>
+<section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>I am a dedicated Industrial and Management Engineer with experience in smart manufacturing, ergonomics, and data analytics. I have worked in both academic and industrial settings, focusing on improving processes and systems using data-driven methods.</p>
+            <p>Currently pursuing a Master's degree at the University of Calabria, I collaborate on research in Industry 4.0 and quality control. I co-founded Engineers Corner, a student society focused on engineering innovation and learning.</p>
+            <p>Contact me at <a href="mailto:atamkumar2018@gmail.com">atamkumar2018@gmail.com</a>.</p>
         </div>
-
-        <div class="md:col-span-8" data-aos="fade-left">
-          <p class="text-lg text-slate-700 mb-5 leading-relaxed">
-            I am an Industrial and Management Engineer with a strong foundation in manufacturing systems, quality management, and digital transformation.
-            Having completed dual Master’s degrees in Engineering Management and Innovation &amp; Product Management, I bring a blend of academic depth and applied experience.
-          </p>
-          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
-            I aim to contribute to advanced research in smart manufacturing and future-ready industrial systems, combining technical expertise with innovative thinking to solve complex industrial challenges.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft flex gap-3">
-              <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-                <i data-feather="user" class="text-primary"></i>
-              </div>
-              <div>
-                <div class="text-sm text-slate-500">Name</div>
-                <div class="font-bold">Atam Kumar Menghwar</div>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft flex gap-3">
-              <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-                <i data-feather="mail" class="text-primary"></i>
-              </div>
-              <div>
-                <div class="text-sm text-slate-500">Email</div>
-                <div class="font-bold">atamkumar2018@gmail.com</div>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft flex gap-3">
-              <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-                <i data-feather="phone" class="text-primary"></i>
-              </div>
-              <div>
-                <div class="text-sm text-slate-500">Phone</div>
-                <div class="font-bold">(+39) 3458416230</div>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-soft flex gap-3">
-              <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-                <i data-feather="map-pin" class="text-primary"></i>
-              </div>
-              <div>
-                <div class="text-sm text-slate-500">Location</div>
-                <div class="font-bold">Rende, Italy</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Socials stay in About (as you requested) -->
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank"
-               class="px-4 py-3 rounded-2xl bg-blue-50 text-primary border border-blue-100 hover:bg-blue-100 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="linkedin"></i> LinkedIn</span>
-            </a>
-            <a href="https://scholar.google.com/citations?user=oL8h-7MAAAAJ&hl=en" target="_blank"
-               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="book-open"></i> Google Scholar</span>
-            </a>
-            <a href="https://x.com/AtamJessani" target="_blank"
-               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="twitter"></i> X</span>
-               </a>
-              <a href="https://www.researchgate.net/profile/Atam-Kumar-2" target="_blank"
-   class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-  <span class="inline-flex items-center gap-2">
-    <i data-feather="book"></i> ResearchGate
-  </span>
-</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Education -->
-  <section id="education" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Education</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li><strong>M.Sc. in Industrial & Management Engineering</strong>, University of Calabria, Italy (expected 2026)</li>
+        <li><strong>B.E. in Industrial Engineering & Management</strong>, Mehran University of Engineering & Technology, Jamshoro, Pakistan (2022)</li>
+    </ul>
+</section>
 
-      <div class="space-y-6">
-        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Dual Master’s Degree in Engineering Management &amp; Innovation and Product Management</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">2023–2025</span>
-          </div>
-          <div class="text-slate-700 font-semibold">
-            University of Calabria, Italy &amp; University of Applied Sciences Upper Austria, Wels Campus
-          </div>
-          <div class="text-slate-600 mt-1">EQF level 7</div>
-          <div class="mt-4 flex flex-col sm:flex-row gap-3">
-            <a href="https://www.unical.it" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-              <i data-feather="link" class="w-4 h-4"></i> University of Calabria
-            </a>
-            <a href="https://fh-ooe.at/en" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-              <i data-feather="link" class="w-4 h-4"></i> FH Upper Austria
-            </a>
-          </div>
-        </div>
+<section id="experience">
+    <h2>Experience</h2>
+    <ul>
+        <li><strong>Intern</strong>, Yunus Textile Mills, Karachi</li>
+        <li><strong>Intern</strong>, Artistic Milliners, Karachi</li>
+        <li><strong>Intern</strong>, Jamshoro Power Company (Power Plant), Jamshoro</li>
+        <li><strong>Co-Founder</strong>, Engineers Corner, Jamshoro – Student engineering society</li>
+        <li><strong>Tutor (Home Teaching)</strong>, Jamshoro (4 years, ongoing)</li>
+    </ul>
+</section>
 
-        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Bachelor’s Degree in Industrial Engineering and Management</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">2018–2022</span>
-          </div>
-          <div class="text-slate-700 font-semibold">Mehran University of Engineering &amp; Technology</div>
-          <div class="text-slate-600 mt-1">CGPA: 3.76/4.00 | EQF level 6</div>
-          <div class="mt-4">
-            <a href="https://www.muet.edu.pk/" target="_blank" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
-              <i data-feather="link" class="w-4 h-4"></i> University Website
-            </a>
-          </div>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">High School Diploma (Intermediate)</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">2016–2018</span>
-          </div>
-          <div class="text-slate-700 font-semibold">Government Higher Secondary School</div>
-          <div class="text-slate-600 mt-1">Grade: 784/1100 | EQF level 4</div>
-        </div>
-      </div>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Machine Learning</span>
+        <span class="skill-badge">XGBoost</span>
+        <span class="skill-badge">OLS Regression</span>
+        <span class="skill-badge">Data Analysis</span>
+        <span class="skill-badge">Grafana</span>
+        <span class="skill-badge">TimescaleDB</span>
+        <span class="skill-badge">MQTT</span>
+        <span class="skill-badge">Node-RED</span>
+        <span class="skill-badge">AutoCAD</span>
+        <span class="skill-badge">Minitab</span>
+        <span class="skill-badge">Lean Six Sigma</span>
     </div>
-  </section>
+</section>
 
-  <!-- Experience -->
-  <section id="experience" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">Work <span class="gradient-text">Experience</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
+<section id="publications">
+    <h2>Publications</h2>
+    <ul>
+        <li><em>Analysis of Risk Factors for Work-related Musculoskeletal Disorders: A Survey Research</em>, International Journal of Engineering and Manufacturing, Vol.12, 2022, pp.1-13. (A. Kumar et al.)</li>
+        <li><em>Students’ Musculoskeletal Disorders Assessment Using RULA</em>, International Journal of Education and Management Engineering, Vol.12 (6), 2022, pp.1-10. (A. Kumar, B. Lal)</li>
+        <li><em>Reduction of Lean Wastes by Using Value Stream Mapping: A Case Study of Textile Company in Pakistan</em>, International Journal of Supply Chain Management, Vol.9 (2), 2024. (A. Kumar et al.)</li>
+        <li><em>Identify Main Challenges in Human Resource Departments and Suggest the Remedial Actions: Case Study</em>, Intl. Journal of Industrial Engineering and Operational Research, Vol.6 (1), 2024. (A. Kumar et al.)</li>
+        <li><em>Design Modification and Fabrication of An Active Solar Dryer</em>, International Journal of Engineering and Manufacturing, Vol.14 (2), 2024, pp.57-73. (D.K. Meghwar, A. Kumar)</li>
+        <li><em>Evaluating the Role of IT Innovations in Enhancing Logistics and Supply Chain Management Effectiveness: A Review Paper</em>, Saudi Journal of Engineering and Technology, Vol.9 (7), 2024, pp.344-357. (A. Kumar, M. Danish)</li>
+        <li><em>How Industry 4.0 Affected Prostheses Manufacturing</em>, Journal of Innovations in Business and Industry, Vol.4 (1), 2026, pp.55-68. (A. Kumar Menghwar, M. Ali)</li>
+    </ul>
+</section>
 
-      <div class="flex gap-4 mb-8 border-b border-slate-200">
-        <button class="tab-btn px-6 py-3 font-semibold active-tab" data-tab="professional">Professional</button>
-        <button class="tab-btn px-6 py-3 font-semibold text-slate-600" data-tab="internship">Internships</button>
-        <button class="tab-btn px-6 py-3 font-semibold text-slate-600" data-tab="volunteer">Volunteering</button>
-      </div>
-
-      <!-- Professional -->
-      <div id="professional" class="tab-content space-y-6">
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Senior Teacher</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">02/2023 - 07/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">APSAC CANT - Badin, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Developed and delivered engaging mathematics lessons for diverse student groups, incorporating real-world applications to enhance understanding.</li>
-            <li>Designed and implemented assessment strategies to monitor student progress and identify areas for improvement in mathematical reasoning.</li>
-            <li>Mentored students in problem-solving techniques and critical thinking, resulting in improved performance and confidence in mathematics.</li>
-          </ul>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-item">
+            <img src="smartmanufacturing.png" alt="Smart Manufacturing">
+            <h3>Smart Manufacturing Framework</h3>
+            <p>Developed a comprehensive smart manufacturing analytics framework, integrating IoT and machine learning to optimize production processes in real time.</p>
         </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Senior Teacher</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">09/2022 - 01/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Brimful Talented Academy - Qasimabad Hyderabad, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Delivered interactive lessons in chemistry and physics, emphasizing conceptual understanding and practical experiments.</li>
-            <li>Created tailored learning resources to support students’ comprehension of complex scientific principles.</li>
-            <li>Encouraged analytical thinking and scientific inquiry, fostering a classroom culture of curiosity and experimentation.</li>
-          </ul>
+        <div class="project-item">
+            <img src="framework.png" alt="Framework Diagram">
+            <h3>Framework Concept</h3>
+            <p>Designed a conceptual framework model for digital transformation in manufacturing, highlighting data flow and system integration for Industry 4.0 applications.</p>
         </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Data Analyst</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">06/2021 - 08/2021</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">District Administration Hyderabad &amp; TIME Institute – Hyderabad, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Supported COVID-19 data management operations as a data entry operator.</li>
-            <li>Developed proficiency in data entry and database management, ensuring accuracy and efficiency in information processing.</li>
-          </ul>
+        <div class="project-item">
+            <img src="virtualmodel.png" alt="Virtual Model">
+            <h3>Virtual Modeling</h3>
+            <p>Created a virtual prototype model of an assembly line to simulate process improvements and visualize sensor data in a digital twin environment.</p>
         </div>
-      </div>
-
-      <!-- Internships -->
-      <div id="internship" class="tab-content hidden space-y-6">
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">06/2022 - 07/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Quality Enhancement Cell (QEC), MUET - Jamshoro, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Assisted in evaluating and ensuring compliance with institutional quality standards.</li>
-            <li>Gained an in-depth understanding of university policies, educational procedures, and administrative operations.</li>
-            <li>Conducted reviews on academic and non-academic departments, including exams, sports, library services, transportation, and human resource management.</li>
-          </ul>
+        <div class="project-item">
+            <img src="ergonomics.png" alt="Ergonomic Assessment">
+            <h3>Ergonomics Study</h3>
+            <p>Conducted ergonomic assessments using RULA to analyze students’ postures in classroom and lab settings, recommending changes to reduce musculoskeletal strain.</p>
         </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">12/2020 - 01/2021</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Artistic Milliners Pvt. Ltd. - Karachi, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Supported production line optimization through line balancing, capacity calculations, and Standard Allowed Minutes (SAM) assessments.</li>
-            <li>Applied ergonomics principles to enhance workplace safety and efficiency.</li>
-            <li>Gained hands-on experience with lean manufacturing tools, including KPIs, Kanban, 5S, and waste minimization techniques.</li>
-          </ul>
+        <div class="project-item">
+            <img src="data.png" alt="Data Analysis">
+            <h3>Data-Driven Analysis</h3>
+            <p>Implemented data collection and analysis for a quality control study, applying statistical methods to identify key risk factors in student activities.</p>
         </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">07/2022 - 08/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Yunus Textile Mills Pvt. Ltd. - Karachi, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Supported production line optimization through line balancing, capacity calculations, and SAM assessments.</li>
-            <li>Applied ergonomics principles to enhance workplace safety and efficiency.</li>
-            <li>Gained hands-on experience with lean manufacturing tools, including KPIs, Kanban, 5S, and waste minimization techniques.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">08/2021 - 09/2021</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Mindstorm Engineering (Virtual) - Karachi, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Acquired foundational knowledge of Industry 4.0 and Industrial Internet of Things (IIoT) technologies.</li>
-            <li>Explored implementation strategies for smart manufacturing systems and industrial automation.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">04/2022 - 05/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">ZIMCO International Corp (Virtual) - Karachi, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Gained insights into power systems architecture and the role of IIoT in enhancing energy efficiency and performance monitoring.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">07/2022 - 08/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">ZIMCO International Corp (Virtual) - Karachi, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Developed a thorough understanding of supply chain and logistics operations.</li>
-            <li>Learned key processes including procurement planning, inventory management, and distribution strategies to optimize supply chain performance.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">02/2022 - 03/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Jamshoro Power Plant Company Limited (GENCO-1) – Jamshoro, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Observed power plant operations, including generation, transmission, and energy utilization processes.</li>
-            <li>Studied critical mechanical components such as boilers, steam turbines, and condensers, enhancing knowledge of thermodynamic systems.</li>
-            <li>Gained an understanding of electrical systems, including generator operations, transformer functions, and control mechanisms.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Volunteering -->
-      <div id="volunteer" class="tab-content hidden space-y-6">
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Founder and Vice President</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">09/2020 - 01/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700">Engineers Corner (Local Society) - MUET Jamshoro, Sindh, Pakistan</h4>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Coordinator of Volunteers</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">09/2020 - 04/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700">Student Organization - MUET Jamshoro, Sindh, Pakistan</h4>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Volunteer and Supervisor</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">2017 - 2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700">Local Youth Forum - Village (Tharparker, Sindh, Pakistan)</h4>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Supervisor</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">08/2021 - 12/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700">Engineering Testing Service - Hyderabad, Sindh, Pakistan</h4>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Skills</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="code" class="text-primary"></i>
-            </div>
-            <h3 class="text-xl font-extrabold">Technical Skills</h3>
-          </div>
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">MS Office Suite</span><span class="text-slate-600">80%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="80"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Minitab</span><span class="text-slate-600">60%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="60"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">MATLAB / SIMULINK</span><span class="text-slate-600">30%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="30"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Python</span><span class="text-slate-600">20%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="20"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Data Science</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="briefcase" class="text-primary"></i>
-            </div>
-            <h3 class="text-xl font-extrabold">Professional Skills</h3>
-          </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Presentation &amp; Communication</span><span class="text-slate-600">80%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="80"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Leadership &amp; Teamwork</span><span class="text-slate-600">85%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="85"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Problem Solving</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Teaching</span><span class="text-slate-600">90%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="90"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Analytical Thinking</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="globe" class="text-primary"></i>
-            </div>
-            <h3 class="text-xl font-extrabold">Languages</h3>
-          </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Sindhi</span><span class="text-slate-600">Native</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="100"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Urdu</span><span class="text-slate-600">C2</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="95"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">English</span><span class="text-slate-600">C1</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="85"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Italian</span><span class="text-slate-600">A2 (Beginner)</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="30"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications -->
-  <section id="publications" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Publications</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Analysis of Risk Factors for Work-related Musculoskeletal Disorders: A Survey Research</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Hafiz Karim Bux Indher, Ali Gul, Rab Nawaz</p>
-          <p class="text-slate-700 mb-4">Journal of Engineering and Manufacturing, Vol.12, No.6, pp. 1-13 (2022)</p>
-          <a href="https://www.mecs-press.org/ijem/ijem-v12-n6/IJEM-V12-N6-1.pdf" target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Students’ Musculoskeletal Disorders Assessment Using RULA</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Bharat Lal</p>
-          <p class="text-slate-700 mb-4">I. J. Education and Management Engineering, Vol.12, No.6, pp. 1-10 (2022)</p>
-          <a href="https://www.mecs-press.org/ijeme/ijeme-v12-n6/IJEME-V12-N6-1.pdf" target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Reduction of Lean Wastes by Using Value Stream Mapping: A Case Study of Textile Company in Pakistan</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Ramesh Kumar and Ali Gul</p>
-          <p class="text-slate-700 mb-4">International Journal of Supply Chain Management, Vol.9, Issue 2, No.3, pp 37 - 61 (2024)</p>
-          <a href="https://www.researchgate.net/profile/Atam-Kumar-2/publication/379118986_Reduction_of_Lean_Wastes_by_Using_Value_Stream_Mapping_A_Case_Study_of_Textile_Company_in_Pakistan/links/65fbeb79f3b56b5b2d17429f/Reduction-of-Lean-Wastes-by-Using-Value-Stream-Mapping-A-Case-Study-of-Textile-Company-in-Pakistan.pdf"
-             target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Design Modification and Fabrication of An Active Solar Dryer</h3>
-          <p class="text-slate-600 mb-2">Authors: Danesh Kumar Meghwar, Atam Kumar</p>
-          <p class="text-slate-700 mb-4">I. J. Engineering and Manufacturing, Vol.14, No.2, pp. 57-73 (2024)</p>
-          <a href="https://www.researchgate.net/profile/Atam-Kumar-2/publication/379431361_Design_Modification_and_Fabrication_of_An_Active_Solar_Dryer/links/66087a7610ca867987301c43/Design-Modification-and-Fabrication-of-An-Active-Solar-Dryer.pdf"
-             target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Identify Main Challenges in Human Resource Departments and Suggest the Remedial Actions: Case Study</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Hafiz Karim Bux Indher, Rab Nawaz</p>
-          <p class="text-slate-700 mb-4">International Journal of Industrial Engineering and Operational Research, Vol. 6 Issue 1, p 79-95 (2024)</p>
-          <a href="https://bgsiran.ir/journal/ojs-3.1.1-4/index.php/IJIEOR/article/view/87" target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Evaluating the Role of IT Innovations in Enhancing Logistics and Supply Chain Management Effectiveness: A Review Paper</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Muhammad Danish</p>
-          <p class="text-slate-700 mb-4">Saudi Journal of Engineering and Technology, Vol. 9 Issue 7, p 344-357 (2024)</p>
-          <a href="https://saudijournals.com/media/articles/SJEAT_97_344-357.pdf" target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">Productivity Improvement of Assembly Line-by-Line Balancing Technique: Case Study Textile Manufacturing Company Karachi Pakistan</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar, Ramesh Kumar</p>
-          <p class="text-slate-700 mb-4">South Asian Journal of Social Studies and Economics, Vol. 21, Issue 5, p 54-72 (2024)</p>
-          <a href="https://www.researchgate.net/profile/Atam-Kumar-2/publication/379407286_Productivity_Improvement_of_Assembly_Line-by-Line_Balancing_Technique_Case_Study_Textile_Manufacturing_Company_Karachi_Pakistan/links/66072b15390c214cfd2473c6/Productivity-Improvement-of-Assembly-Line-by-Line-Balancing-Technique-Case-Study-Textile-Manufacturing-Company-Karachi-Pakistan.pdf"
-             target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <h3 class="text-xl font-extrabold mb-2">HOW INDUSTRY 4.0 AFFECTED PROSTHESES MANUFACTURING</h3>
-          <p class="text-slate-600 mb-2">Authors: Atam Kumar Menghwar, Miskeen Ali</p>
-          <p class="text-slate-700 mb-4">Journal of Innovations in Business and Industry, Vol. 04 Issue 01, p55-68 (2026)</p>
-          <a href="https://www.researchgate.net/profile/Atam-Kumar-2/publication/394447631_HOW_INDUSTRY_40_AFFECTED_PROSTHESES_MANUFACTURING/links/689b1864fc368579b82f2cba/HOW-INDUSTRY-40-AFFECTED-PROSTHESES-MANUFACTURING.pdf"
-             target="_blank"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition shadow-soft">
-            <i data-feather="external-link" class="w-4 h-4"></i> View Paper
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Projects</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-xl font-extrabold">
-              Analysis of Risk Factors for Work-related Musculoskeletal Disorders: A Survey Research
-              <span class="block text-sm font-semibold text-slate-500 mt-1">[Bachelor's Degree Thesis]</span>
-            </h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm whitespace-nowrap">01/2022 – 10/2022</span>
-          </div>
-          <ul class="mt-4 list-disc pl-5 space-y-2 text-slate-700">
-            <li>Conducted a comprehensive quantitative research study on the prevalence and risk factors of WMSDs among professionals in industrial, educational, and healthcare sectors.</li>
-            <li>Designed and implemented an online survey incorporating socio-demographic, psychological, occupational, and biomechanical risk factors (116 participants).</li>
-            <li>Performed advanced statistical analyses including descriptive statistics, correlation, and ANOVA tests to identify significant associations using Excel.</li>
-            <li>Developed and validated a conceptual regression model linking risk factors with musculoskeletal symptoms.</li>
-            <li>Delivered actionable recommendations aligned with SDG 3 to improve workplace ergonomics and reduce WMSD prevalence.</li>
-          </ul>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-xl font-extrabold">
-              A Causal Digital Twin Framework for Sustainable Decision Making in Smart Manufacturing Systems
-              <span class="block text-sm font-semibold text-slate-500 mt-1">[Master's Degree Thesis]</span>
-            </h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm whitespace-nowrap">31/01/2025 – 10/09/2025</span>
-          </div>
-          <ul class="mt-4 list-disc pl-5 space-y-2 text-slate-700">
-            <li>Developed a four-layer Causal Digital Twin Framework (CDTF) integrating real-time data, AI-based predictions, and causal inference.</li>
-            <li>Designed and implemented a real-time monitoring system using TimescaleDB and Grafana to track operational energy data from a 3D printer use case.</li>
-            <li>Applied XGBoost for RUL prediction and causal inference techniques to isolate actionable drivers of energy optimization.</li>
-            <li>Conducted validation using OLS diagnostics (residual analysis, VIF, Durbin-Watson, HAC correction).</li>
-            <li>Proposed a replicable framework aligned with Industry 4.0 and SDG 9.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Certifications</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft">
-          <h3 class="text-xl font-extrabold mb-5">Short Courses</h3>
-          <ul class="space-y-4 text-slate-700">
-            <li class="flex gap-3">
-              <span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span>
-              <div><span class="font-bold">06/2021 – 09/2021:</span> Three-month Project Management Course at TIME Institute, Hyderabad, Sindh, Pakistan</div>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span>
-              <div><span class="font-bold">03/2022 – 09/2022:</span> Six-month Inspection &amp; Quality Control Course at ORIC, MUET Jamshoro, Sindh, Pakistan</div>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span>
-              <div><span class="font-bold">02/2021 – 05/2021:</span> Training in Creative Writing &amp; AutoCAD — DigiSkills Training Program (virtual), Pakistan</div>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span>
-              <div>One-day seminar: <span class="italic">"Industry-Academia Dialogue forum on Industry 4.0"</span></div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft">
-          <h3 class="text-xl font-extrabold mb-5">Certifications</h3>
-          <ul class="space-y-4 text-slate-700">
-            <li class="flex gap-3"><span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span><div>Workshop: <span class="italic">"Peace, Tolerance, and Emotional Intelligence"</span></div></li>
-            <li class="flex gap-3"><span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span><div>Online workshop: <span class="italic">"Industrial Automation and Industrial IoT"</span></div></li>
-            <li class="flex gap-3"><span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span><div>Webinar: <span class="italic">"Data Science with Machine Learning"</span></div></li>
-            <li class="flex gap-3"><span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span><div>Panel discussion: <span class="italic">“Leading my Student Branch to Success.”</span></div></li>
-            <li class="flex gap-3"><span class="mt-1 text-primary"><i data-feather="chevron-right"></i></span><div>Certificate: <span class="italic">"Six Sigma Yellow Belt"</span> — 6sigmastudy (online)</div></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recommendations -->
-  <section id="recommendations" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Recommendations</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="award" class="text-primary"></i>
-            </div>
-            <div>
-              <h3 class="text-xl font-extrabold">Prof. Dr. Peter Hehenberger</h3>
-              <p class="text-slate-600">University of Applied Sciences Upper Austria</p>
-            </div>
-          </div>
-          <p class="text-slate-700 font-semibold mb-2">Professor of Integrated Product Development &amp; Smart Mechatronics Engineering Research Group</p>
-          <p class="text-slate-600">"Atam has demonstrated exceptional research capability, dedication, and innovative thinking during his Master's studies. His ability to integrate engineering management with digital technologies is outstanding."</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="award" class="text-primary"></i>
-            </div>
-            <div>
-              <h3 class="text-xl font-extrabold">Prof. Dr. Muhammad Saad Memon</h3>
-              <p class="text-slate-600">Mehran University of Engineering and Technology, Jamshoro, Pakistan</p>
-            </div>
-          </div>
-          <p class="text-slate-700 font-semibold mb-2">Professor of Industrial Engineering &amp; Management</p>
-          <p class="text-slate-600">"Atam stands out as a highly motivated student with excellent analytical and project management skills. His work on innovation and product management reflects strong academic and practical contributions."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- My Documents (your GitHub /projects/ files) -->
-  <section id="documents" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Documents</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-        <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
-          Click <b>Open</b> to view the document in a new tab, or <b>Download</b> to save it.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- CV -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="file-text" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Curriculum Vitae (CV)</h3>
-              <p class="text-sm text-slate-600 mt-1">Atam_CV.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Atam_CV.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Atam_CV.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-
-        <!-- Internships & Jobs -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="briefcase" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Internships &amp; Jobs</h3>
-              <p class="text-sm text-slate-600 mt-1">Internships_Jobs.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Internships_Jobs.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Internships_Jobs.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-
-        <!-- Publications file -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="book-open" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Publications List</h3>
-              <p class="text-sm text-slate-600 mt-1">Publications.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Publications.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Publications.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-
-        <!-- Seminars -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="video" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Seminars &amp; Webinars</h3>
-              <p class="text-sm text-slate-600 mt-1">Seminars_Webinars.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Seminars_Webinars.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Seminars_Webinars.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-
-        <!-- Short courses -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="award" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Short Courses</h3>
-              <p class="text-sm text-slate-600 mt-1">Short_Courses.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Short_Courses.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Short_Courses.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-
-        <!-- Thesis description -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
-          <div class="flex items-start gap-4">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="layers" class="text-primary"></i>
-            </div>
-            <div class="min-w-0">
-              <h3 class="text-lg font-extrabold leading-snug">Thesis Description</h3>
-              <p class="text-sm text-slate-600 mt-1">Thesis_Description.pdf</p>
-            </div>
-          </div>
-          <div class="mt-5 flex gap-3">
-            <a href="projects/Thesis_Description.pdf" target="_blank"
-               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
-              <i data-feather="external-link" class="w-4 h-4"></i> Open
-            </a>
-            <a href="projects/Thesis_Description.pdf" download
-               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
-              <i data-feather="download" class="w-4 h-4"></i> Download
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">Get In <span class="gradient-text">Touch</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        <!-- Contact Information: ONLY Email, Phone, Address -->
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft" data-aos="fade-right">
-          <h3 class="text-2xl font-extrabold mb-6">Contact Information</h3>
-
-          <div class="space-y-5">
-            <div class="flex gap-4">
-              <div class="h-12 w-12 rounded-2xl bg-primary flex items-center justify-center">
-                <i data-feather="mail" class="text-white"></i>
-              </div>
-              <div>
-                <div class="font-bold">Email</div>
-                <a class="text-slate-700 hover:text-primary font-semibold" href="mailto:atamkumar2018@gmail.com">
-                  atamkumar2018@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="h-12 w-12 rounded-2xl bg-primary flex items-center justify-center">
-                <i data-feather="phone" class="text-white"></i>
-              </div>
-              <div>
-                <div class="font-bold">Phone</div>
-                <a class="text-slate-700 hover:text-primary font-semibold" href="tel:+393458416230">
-                  (+39) 3458416230
-                </a>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="h-12 w-12 rounded-2xl bg-primary flex items-center justify-center">
-                <i data-feather="map-pin" class="text-white"></i>
-              </div>
-              <div>
-                <div class="font-bold">Address</div>
-                <div class="text-slate-700 font-semibold">University of Calabria, Rende (CS), Italy</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact form (no text below button) -->
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft" data-aos="fade-left">
-          <h3 class="text-2xl font-extrabold mb-6">Send a Message</h3>
-
-          <!-- Replace YOUR_FORM_ID with your Formspree form id (or your backend endpoint) -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="_gotcha" class="hidden" />
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="text-sm font-semibold text-slate-700">Your Name</label>
-                <input name="name" required
-                       class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
-                       placeholder="John Doe">
-              </div>
-
-              <div>
-                <label class="text-sm font-semibold text-slate-700">Your Email</label>
-                <input type="email" name="email" required
-                       class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
-                       placeholder="john@example.com">
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label class="text-sm font-semibold text-slate-700">Subject</label>
-              <input name="subject" required
-                     class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
-                     placeholder="Subject">
-            </div>
-
-            <div class="mt-4">
-              <label class="text-sm font-semibold text-slate-700">Message</label>
-              <textarea name="message" rows="5" required
-                        class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Your message..."></textarea>
-            </div>
-
-            <button type="submit"
-                    class="mt-6 w-full px-6 py-3 rounded-2xl bg-primary text-white font-extrabold shadow-soft hover:bg-secondary transition">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-slate-950 text-white py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between gap-6 items-start md:items-center">
-        <div>
-          <h3 class="text-2xl font-extrabold">Atam Kumar Menghwar</h3>
-          <p class="text-slate-300 mt-1">Industrial &amp; Management Engineer</p>
-        </div>
-
-        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
-          <a href="#about" class="hover:text-white">About</a>
-          <a href="#education" class="hover:text-white">Education</a>
-          <a href="#experience" class="hover:text-white">Experience</a>
-          <a href="#skills" class="hover:text-white">Skills</a>
-          <a href="#publications" class="hover:text-white">Publications</a>
-          <a href="#projects" class="hover:text-white">Projects</a>
-          <a href="#documents" class="hover:text-white">My Documents</a>
-          <a href="#contact" class="hover:text-white">Contact</a>
-        </div>
-
-        <div class="flex gap-4 text-slate-300">
-          <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank" class="hover:text-white"><i data-feather="linkedin"></i></a>
-          <a href="https://x.com/AtamJessani" target="_blank" class="hover:text-white"><i data-feather="twitter"></i></a>
-          <a href="https://www.facebook.com/atamkumar.jessani" target="_blank" class="hover:text-white"><i data-feather="facebook"></i></a>
-        </div>
-      </div>
-
-      <div class="mt-8 pt-6 border-t border-white/10 text-slate-400 text-sm flex flex-col md:flex-row justify-between gap-2">
-        <div>© <span id="year"></span> Atam Kumar Menghwar. All rights reserved.</div>
-        <div>Hosted on GitHub Pages</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top -->
-  <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-2xl shadow-soft hidden">
-    <i data-feather="arrow-up"></i>
-  </button>
-
-  <script>
-    // AOS
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-
-    // Feather
-    feather.replace();
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      feather.replace();
-    });
-
-    // Tabs
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => { b.classList.remove('active-tab'); b.classList.add('text-slate-600'); });
-        btn.classList.add('active-tab'); btn.classList.remove('text-slate-600');
-        tabContents.forEach(c => c.classList.add('hidden'));
-        document.getElementById(btn.getAttribute('data-tab')).classList.remove('hidden');
-      });
-    });
-
-    // Back to top
-    const backToTopBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 350) backToTopBtn.classList.remove('hidden');
-      else backToTopBtn.classList.add('hidden');
-    });
-    backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Skill bars animate when skills section visible
-    const bars = document.querySelectorAll('.skill-bar');
-    bars.forEach(b => b.style.width = "0%");
-    const skillsSection = document.querySelector('#skills');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          bars.forEach(bar => {
-            const p = bar.getAttribute('data-progress') || "0";
-            bar.style.width = p + "%";
-          });
-          obs.disconnect();
-        }
-      });
-    }, { threshold: 0.35 });
-    if (skillsSection) obs.observe(skillsSection);
-  </script>
+</section>
+
+<section id="documents">
+    <h2>My Documents</h2>
+    <ul class="documents-list">
+        <li><a href="projects/CV.pdf" target="_blank">CV (Curriculum Vitae)</a></li>
+        <li><a href="projects/Thesis_Description.pdf" target="_blank">Thesis Description</a></li>
+        <li><a href="projects/Publications.pdf" target="_blank">Publications List</a></li>
+        <li><a href="projects/Internships_Jobs.pdf" target="_blank">Internships &amp; Jobs</a></li>
+        <li><a href="projects/Seminars_Webinars.pdf" target="_blank">Seminars &amp; Webinars</a></li>
+        <li><a href="projects/Short_Courses.pdf" target="_blank">Short Courses</a></li>
+    </ul>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Certified Six Sigma Yellow Belt</li>
+        <li>Industrial Automation and IoT Course</li>
+        <li>Data Science with Machine Learning (Online Specialization)</li>
+        <li>Project Management Professional (in progress)</li>
+    </ul>
+</section>
+
+<section id="recommendations">
+    <h2>Recommendations</h2>
+    <p>No formal recommendations available. References and recommendations are available upon request.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <ul class="contact-info">
+        <li><strong>Email:</strong> <a href="mailto:atamkumar2018@gmail.com">atamkumar2018@gmail.com</a></li>
+        <li><strong>Phone:</strong> +123-456-7890</li>
+        <li><strong>Address:</strong> Jamshoro, Sindh, Pakistan</li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2025 Atam Kumar Menghwar. All rights reserved.
+</footer>
 
 </body>
 </html>
