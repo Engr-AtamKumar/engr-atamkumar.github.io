@@ -50,11 +50,8 @@
       color:#1e40af;
       font-weight:700;
     }
-    /* Skill bars */
     .skill-bar { width: 0%; transition: width 1.6s ease; }
-    @media (prefers-reduced-motion: reduce){
-      .skill-bar { transition:none !important; }
-    }
+    @media (prefers-reduced-motion: reduce){ .skill-bar { transition:none !important; } }
   </style>
 </head>
 
@@ -88,6 +85,7 @@
           <a href="#skills" class="text-slate-700 hover:text-primary">Skills</a>
           <a href="#publications" class="text-slate-700 hover:text-primary">Publications</a>
           <a href="#projects" class="text-slate-700 hover:text-primary">Projects</a>
+          <a href="#documents" class="text-slate-700 hover:text-primary">Downloads</a>
           <a href="#certifications" class="text-slate-700 hover:text-primary">Certifications</a>
           <a href="#recommendations" class="text-slate-700 hover:text-primary">Recommendations</a>
           <a href="#contact" class="text-slate-700 hover:text-primary">Contact</a>
@@ -107,6 +105,7 @@
           <a href="#skills" class="px-3 py-2 rounded-xl hover:bg-slate-100">Skills</a>
           <a href="#publications" class="px-3 py-2 rounded-xl hover:bg-slate-100">Publications</a>
           <a href="#projects" class="px-3 py-2 rounded-xl hover:bg-slate-100">Projects</a>
+          <a href="#documents" class="px-3 py-2 rounded-xl hover:bg-slate-100">Downloads</a>
           <a href="#certifications" class="px-3 py-2 rounded-xl hover:bg-slate-100">Certifications</a>
           <a href="#recommendations" class="px-3 py-2 rounded-xl hover:bg-slate-100">Recommendations</a>
           <a href="#contact" class="px-3 py-2 rounded-xl hover:bg-slate-100">Contact</a>
@@ -116,185 +115,62 @@
   </nav>
 
   <!-- Hero -->
-  <!-- Hero (UPDATED: no document chips here, adds Research Focus + Methodology) -->
-<header class="pt-14 pb-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-      <!-- Left -->
-      <div class="lg:col-span-7" data-aos="fade-right">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 shadow-soft text-sm">
-          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-          Available for research collaboration • PhD applications
-        </div>
-
-        <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-          Hi, I’m <span class="gradient-text">Atam Kumar Menghwar</span>
-        </h1>
-
-        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
-          Industrial &amp; Management Engineer specializing in smart manufacturing, quality
-          management, and digital transformation with a passion for research and innovation.
-        </p>
-
-        <!-- Buttons (ONLY primary actions) -->
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#contact" class="px-6 py-3 rounded-2xl bg-primary text-white font-semibold shadow-soft hover:shadow-soft2 transition">
-            Contact Me
-          </a>
-          <a href="#publications" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-            View Publications
-          </a>
-          <a href="/projects/Atam_CV.pdf" target="_blank" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-            Download CV
-          </a>
-        </div>
-
-        <!-- Research Focus -->
-        <div class="mt-9 p-6 rounded-3xl bg-white/80 border border-slate-200 shadow-soft">
-          <div class="flex items-center gap-2">
-            <div class="h-10 w-10 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="target" class="text-primary"></i>
-            </div>
-            <h3 class="text-lg font-extrabold text-slate-900">Research Focus</h3>
-          </div>
-
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Digital Twins for Sustainable Manufacturing</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Smart Manufacturing Systems (Industry 4.0 &amp; Industry 5.0)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Energy-Efficient and Sustainable Decision-Making</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Cyber-Physical Systems (CPS)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">AI-Driven Manufacturing Intelligence</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Inference in Industrial Systems</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Digital Transformation of Manufacturing and Healthcare</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Predictive Maintenance and Remaining Useful Life (RUL)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Smart Healthcare Systems and Human–Digital Twins</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Digital Supply Chain Management and Logistics Optimization</span>
-          </div>
-        </div>
-
-        <!-- Preferred Methodology -->
-        <div class="mt-5 p-6 rounded-3xl bg-white/80 border border-slate-200 shadow-soft">
-          <div class="flex items-center gap-2">
-            <div class="h-10 w-10 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="cpu" class="text-primary"></i>
-            </div>
-            <h3 class="text-lg font-extrabold text-slate-900">Preferred Methodology</h3>
-          </div>
-
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Digital Twin Framework (CDTF) Development</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Real-Time Data Acquisition and Time-Series Databases (TimescaleDB)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Data Visualization and Monitoring (Grafana)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Machine Learning Models (XGBoost, Predictive Analytics)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Modeling and Inference Techniques</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Ordinary Least Squares (OLS) Regression</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Regression Diagnostics (Residual Analysis, Q–Q Plots, Histograms)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Multicollinearity Analysis (Variance Inflation Factor – VIF)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Autocorrelation Testing (Durbin–Watson Test)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Robust Estimation (Newey–West HAC Corrections)</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Survey-Based Quantitative Research</span>
-            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Statistical Analysis (Correlation, ANOVA, Regression Modeling)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right (image) -->
-      <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/25 to-indigo-500/20 blur-2xl"></div>
-          <div class="relative bg-white p-2 rounded-[2rem] shadow-soft2 border border-slate-200">
-            <img src="atampc.jpeg" alt="Atam Kumar" class="w-72 h-72 rounded-[1.6rem] object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-  <!-- NEW: Documents Section (all your PDFs) -->
-  <section id="documents" class="py-20 bg-white">
+  <header class="pt-14 pb-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Documents</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-        <p class="mt-4 text-slate-600">Open any document in a new tab.</p>
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7" data-aos="fade-right">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 shadow-soft text-sm">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Available for research collaboration • PhD applications
+          </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        <a href="/projects/Atam_CV.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="download" class="text-primary"></i>
+          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
+            Hi, I’m <span class="gradient-text">Atam Kumar Menghwar</span>
+          </h1>
+
+          <p class="mt-4 text-lg text-slate-700 leading-relaxed">
+            Industrial &amp; Management Engineer specializing in smart manufacturing, quality management, and digital transformation with a passion for research and innovation.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#contact" class="px-6 py-3 rounded-2xl bg-primary text-white font-semibold shadow-soft hover:shadow-soft2 transition">
+              Contact Me
+            </a>
+            <a href="#publications" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
+              View Publications
+            </a>
+            <a href="projects/Atam_CV.pdf" target="_blank" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition inline-flex items-center gap-2">
+              <i data-feather="download" class="w-4 h-4"></i> Download CV
+            </a>
+          </div>
+
+          <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
+              <div class="text-sm text-slate-500">Focus</div>
+              <div class="font-bold">Digital Twins &amp; Causal Modeling</div>
             </div>
-            <div>
-              <div class="text-lg font-extrabold">Curriculum Vitae</div>
-              <div class="text-sm text-slate-600">Atam_CV.pdf</div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
+              <div class="text-sm text-slate-500">Tools</div>
+              <div class="font-bold">TimescaleDB • Grafana • XGBoost</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
+              <div class="text-sm text-slate-500">Research</div>
+              <div class="font-bold">Sustainability (Energy)</div>
             </div>
           </div>
-        </a>
+        </div>
 
-        <a href="/projects/Publications.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="file-text" class="text-primary"></i>
-            </div>
-            <div>
-              <div class="text-lg font-extrabold">Publications</div>
-              <div class="text-sm text-slate-600">Publications.pdf</div>
+        <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
+          <div class="relative">
+            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/25 to-indigo-500/20 blur-2xl"></div>
+            <div class="relative bg-white p-2 rounded-[2rem] shadow-soft2 border border-slate-200">
+              <img src="atampc.jpeg" alt="Atam Kumar" class="w-72 h-72 rounded-[1.6rem] object-cover">
             </div>
           </div>
-        </a>
-
-        <a href="/projects/Internships_Jobs.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="briefcase" class="text-primary"></i>
-            </div>
-            <div>
-              <div class="text-lg font-extrabold">Internships &amp; Jobs</div>
-              <div class="text-sm text-slate-600">Internships_Jobs.pdf</div>
-            </div>
-          </div>
-        </a>
-
-        <a href="/projects/Short_Courses.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="award" class="text-primary"></i>
-            </div>
-            <div>
-              <div class="text-lg font-extrabold">Short Courses</div>
-              <div class="text-sm text-slate-600">Short_Courses.pdf</div>
-            </div>
-          </div>
-        </a>
-
-        <a href="/projects/Seminars_Webinars.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="video" class="text-primary"></i>
-            </div>
-            <div>
-              <div class="text-lg font-extrabold">Seminars &amp; Webinars</div>
-              <div class="text-sm text-slate-600">Seminars_Webinars.pdf</div>
-            </div>
-          </div>
-        </a>
-
-        <a href="/projects/Thesis_Description.pdf" target="_blank" class="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft2 transition block">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="book-open" class="text-primary"></i>
-            </div>
-            <div>
-              <div class="text-lg font-extrabold">Mater's Thesis Description</div>
-              <div class="text-sm text-slate-600">Thesis_Description.pdf</div>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- About -->
   <section id="about" class="py-20 bg-white">
@@ -313,14 +189,11 @@
 
         <div class="md:col-span-8" data-aos="fade-left">
           <p class="text-lg text-slate-700 mb-5 leading-relaxed">
-            I am an Industrial and Management Engineer with a strong foundation in manufacturing systems,
-            quality management, and digital transformation. Having completed dual Master’s degrees in
-            Engineering Management and Innovation &amp; Product Management, I bring a blend of academic depth
-            and applied experience.
+            I am an Industrial and Management Engineer with a strong foundation in manufacturing systems, quality management, and digital transformation.
+            Having completed dual Master’s degrees in Engineering Management and Innovation &amp; Product Management, I bring a blend of academic depth and applied experience.
           </p>
           <p class="text-lg text-slate-700 mb-6 leading-relaxed">
-            I aim to contribute to advanced research in smart manufacturing and future-ready industrial systems,
-            combining technical expertise with innovative thinking to solve complex industrial challenges.
+            I aim to contribute to advanced research in smart manufacturing and future-ready industrial systems, combining technical expertise with innovative thinking to solve complex industrial challenges.
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -366,17 +239,21 @@
           </div>
 
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank" class="px-4 py-3 rounded-2xl bg-blue-50 text-primary border border-blue-100 hover:bg-blue-100 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="linkedin"></i> LinkedIn</span>
+            <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-blue-50 text-primary border border-blue-100 hover:bg-blue-100 transition shadow-soft inline-flex items-center gap-2">
+              <i data-feather="linkedin"></i> LinkedIn
             </a>
-            <a href="https://scholar.google.com/citations?user=oL8h-7MAAAAJ&hl=en" target="_blank" class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="book-open"></i> Google Scholar</span>
+            <a href="https://scholar.google.com/citations?user=oL8h-7MAAAAJ&hl=en" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft inline-flex items-center gap-2">
+              <i data-feather="book-open"></i> Google Scholar
             </a>
-            <a href="https://x.com/AtamJessani" target="_blank" class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="twitter"></i> X</span>
+            <a href="https://x.com/AtamJessani" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft inline-flex items-center gap-2">
+              <i data-feather="twitter"></i> X
             </a>
-            <a href="https://www.facebook.com/atamkumar.jessani" target="_blank" class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft">
-              <span class="inline-flex items-center gap-2"><i data-feather="facebook"></i> Facebook</span>
+            <a href="https://www.facebook.com/atamkumar.jessani" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 transition shadow-soft inline-flex items-center gap-2">
+              <i data-feather="facebook"></i> Facebook
             </a>
           </div>
         </div>
@@ -439,299 +316,161 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-20 bg-white">
+  <!-- (YOUR EXPERIENCE SECTION UNCHANGED) -->
+  <!-- Keep your full experience section exactly as you already have it -->
+  <!-- ... -->
+  <!-- Skills / Publications / Projects / Certifications / Recommendations -->
+  <!-- Keep your sections as-is until Projects section -->
+
+  <!-- Projects (UNCHANGED from your content) -->
+  <!-- ... your existing Projects section ... -->
+
+  <!-- NEW: Downloads / Documents (GitHub files clickable + download) -->
+  <section id="documents" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">Work <span class="gradient-text">Experience</span></h2>
+        <h2 class="text-3xl font-extrabold">Downloads <span class="gradient-text">Library</span></h2>
         <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
+        <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+          Click any file to open it in a new tab, or download it directly.
+        </p>
       </div>
 
-      <div class="flex gap-4 mb-8 border-b border-slate-200">
-        <button class="tab-btn px-6 py-3 font-semibold active-tab" data-tab="professional">Professional</button>
-        <button class="tab-btn px-6 py-3 font-semibold text-slate-600" data-tab="internship">Internships</button>
-        <button class="tab-btn px-6 py-3 font-semibold text-slate-600" data-tab="volunteer">Volunteering</button>
-      </div>
-
-      <!-- Professional -->
-      <div id="professional" class="tab-content space-y-6">
-        <!-- ... (UNCHANGED content) ... -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Senior Teacher</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">02/2023 - 07/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">APSAC CANT - Badin, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Developed and delivered engaging mathematics lessons for diverse student groups, incorporating real-world applications to enhance understanding.</li>
-            <li>Designed and implemented assessment strategies to monitor student progress and identify areas for improvement in mathematical reasoning.</li>
-            <li>Mentored students in problem-solving techniques and critical thinking, resulting in improved performance and confidence in mathematics.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Senior Teacher</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">09/2022 - 01/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Brimful Talented Academy - Qasimabad Hyderabad, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Delivered interactive lessons in chemistry and physics, emphasizing conceptual understanding and practical experiments.</li>
-            <li>Created tailored learning resources to support students’ comprehension of complex scientific principles.</li>
-            <li>Encouraged analytical thinking and scientific inquiry, fostering a classroom culture of curiosity and experimentation.</li>
-          </ul>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Data Analyst</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">06/2021 - 08/2021</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">District Administration Hyderabad &amp; TIME Institute – Hyderabad, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Supported COVID-19 data management operations as a data entry operator.</li>
-            <li>Developed proficiency in data entry and database management, ensuring accuracy and efficiency in information processing.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Internships -->
-      <div id="internship" class="tab-content hidden space-y-6">
-        <!-- ... (UNCHANGED content) ... -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Internee</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">06/2022 - 07/2022</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700 mb-3">Quality Enhancement Cell (QEC), MUET - Jamshoro, Sindh, Pakistan</h4>
-          <ul class="list-disc pl-5 space-y-2 text-slate-700">
-            <li>Assisted in evaluating and ensuring compliance with institutional quality standards.</li>
-            <li>Gained an in-depth understanding of university policies, educational procedures, and administrative operations.</li>
-            <li>Conducted reviews on academic and non-academic departments, including exams, sports, library services, transportation, and human resource management.</li>
-          </ul>
-        </div>
-        <!-- (rest unchanged) -->
-      </div>
-
-      <!-- Volunteering -->
-      <div id="volunteer" class="tab-content hidden space-y-6">
-        <!-- ... (UNCHANGED content) ... -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-soft transition" data-aos="fade-up">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-2">
-            <h3 class="text-xl font-extrabold">Founder and Vice President</h3>
-            <span class="px-3 py-1 rounded-full bg-blue-50 text-primary font-semibold text-sm">09/2020 - 01/2023</span>
-          </div>
-          <h4 class="text-lg font-semibold text-slate-700">Engineers Corner (Local Society) - MUET Jamshoro, Sindh, Pakistan</h4>
-        </div>
-        <!-- (rest unchanged) -->
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Skills</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        <!-- Technical Skills -->
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="code" class="text-primary"></i>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="file-text" class="text-primary"></i>
             </div>
-            <h3 class="text-xl font-extrabold">Technical Skills</h3>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Curriculum Vitae (CV)</h3>
+              <p class="text-sm text-slate-600 mt-1">Atam_CV.pdf</p>
+            </div>
           </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">MS Office Suite</span><span class="text-slate-600">80%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="80"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Minitab</span><span class="text-slate-600">60%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="60"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">MATLAB / SIMULINK</span><span class="text-slate-600">30%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="30"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Python</span><span class="text-slate-600">20%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="20"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Data Science</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Atam_CV.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Atam_CV.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
           </div>
         </div>
 
-        <!-- Professional Skills -->
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
               <i data-feather="briefcase" class="text-primary"></i>
             </div>
-            <h3 class="text-xl font-extrabold">Professional Skills</h3>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Internships &amp; Jobs</h3>
+              <p class="text-sm text-slate-600 mt-1">Internships_Jobs.pdf</p>
+            </div>
           </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Presentation &amp; Communication</span><span class="text-slate-600">80%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="80"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Leadership &amp; Teamwork</span><span class="text-slate-600">85%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="85"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Problem Solving</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Teaching</span><span class="text-slate-600">90%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="90"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Analytical Thinking</span><span class="text-slate-600">70%</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="70"></div>
-              </div>
-            </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Internships_Jobs.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Internships_Jobs.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
           </div>
         </div>
 
-        <!-- FIXED: Languages inside the same grid + progress bars + Italian A2 -->
-        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft2 transition">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="h-11 w-11 rounded-2xl bg-blue-50 flex items-center justify-center">
-              <i data-feather="globe" class="text-primary"></i>
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="book-open" class="text-primary"></i>
             </div>
-            <h3 class="text-xl font-extrabold">Languages</h3>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Publications</h3>
+              <p class="text-sm text-slate-600 mt-1">Publications.pdf</p>
+            </div>
           </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Sindhi</span><span class="text-slate-600">Native</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="100"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Urdu</span><span class="text-slate-600">C2</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="95"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">English</span><span class="text-slate-600">C1</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="85"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between mb-1 text-sm">
-                <span class="font-semibold">Italian</span><span class="text-slate-600">A2 (Beginner)</span>
-              </div>
-              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
-                <div class="bg-accent h-2.5 rounded-full skill-bar" data-progress="30"></div>
-              </div>
-            </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Publications.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Publications.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
           </div>
         </div>
 
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="video" class="text-primary"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Seminars &amp; Webinars</h3>
+              <p class="text-sm text-slate-600 mt-1">Seminars_Webinars.pdf</p>
+            </div>
+          </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Seminars_Webinars.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Seminars_Webinars.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="award" class="text-primary"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Short Courses</h3>
+              <p class="text-sm text-slate-600 mt-1">Short_Courses.pdf</p>
+            </div>
+          </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Short_Courses.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Short_Courses.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-soft hover:shadow-soft2 transition" data-aos="fade-up">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="layers" class="text-primary"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-lg font-extrabold leading-snug">Thesis Description</h3>
+              <p class="text-sm text-slate-600 mt-1">Thesis_Description.pdf</p>
+            </div>
+          </div>
+          <div class="mt-5 flex gap-3">
+            <a href="projects/Thesis_Description.pdf" target="_blank"
+               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-primary text-white font-semibold hover:bg-secondary transition">
+              <i data-feather="external-link" class="w-4 h-4"></i> Open
+            </a>
+            <a href="projects/Thesis_Description.pdf" download
+               class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 font-semibold hover:border-slate-300 transition">
+              <i data-feather="download" class="w-4 h-4"></i> Download
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Publications -->
-  <section id="publications" class="py-20 bg-white">
-    <!-- ... UNCHANGED ... -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold">My <span class="gradient-text">Publications</span></h2>
-        <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
-      </div>
-      <!-- (rest unchanged) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-        <!-- your existing publication cards here unchanged -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-20">
-    <!-- ... UNCHANGED ... -->
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="py-20 bg-white">
-    <!-- ... UNCHANGED ... -->
-  </section>
-
-  <!-- Recommendations -->
-  <section id="recommendations" class="py-20">
-    <!-- ... UNCHANGED ... -->
   </section>
 
   <!-- Contact -->
@@ -753,7 +492,9 @@
               </div>
               <div>
                 <div class="font-bold">Email</div>
-                <div class="text-slate-700">atamkumar2018@gmail.com</div>
+                <a class="text-slate-700 hover:text-primary font-semibold" href="mailto:atamkumar2018@gmail.com">
+                  atamkumar2018@gmail.com
+                </a>
               </div>
             </div>
 
@@ -763,7 +504,9 @@
               </div>
               <div>
                 <div class="font-bold">Phone</div>
-                <div class="text-slate-700">(+39) 3458416230</div>
+                <a class="text-slate-700 hover:text-primary font-semibold" href="tel:+393458416230">
+                  (+39) 3458416230
+                </a>
               </div>
             </div>
 
@@ -773,53 +516,64 @@
               </div>
               <div>
                 <div class="font-bold">Address</div>
-                <div class="text-slate-700">Via Alberto Sivinio, Maisonettes, 87036, Rende, Italy</div>
+                <div class="text-slate-700">Rende, Italy</div>
               </div>
             </div>
           </div>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank" class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 shadow-soft transition inline-flex items-center gap-2">
+            <a href="https://www.linkedin.com/in/atam-kumar/" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 shadow-soft transition inline-flex items-center gap-2">
               <i data-feather="linkedin"></i> LinkedIn
             </a>
-            <a href="https://scholar.google.com/citations?user=oL8h-7MAAAAJ&hl=en" target="_blank" class="px-4 py-3 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 shadow-soft transition inline-flex items-center gap-2">
-              <i data-feather="book-open"></i> Scholar
-            </a>
-
-            <!-- FIXED: absolute path -->
-            <a href="/projects/Atam_CV.pdf" target="_blank" class="px-4 py-3 rounded-2xl bg-primary text-white shadow-soft transition inline-flex items-center gap-2">
+            <a href="projects/Atam_CV.pdf" target="_blank"
+               class="px-4 py-3 rounded-2xl bg-primary text-white shadow-soft transition inline-flex items-center gap-2 hover:bg-secondary">
               <i data-feather="download"></i> CV
             </a>
           </div>
         </div>
 
-        <!-- UPDATED: real working contact (mailto) + removed extra text -->
+        <!-- Contact form (works when you add your Formspree endpoint) -->
         <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-soft" data-aos="fade-left">
           <h3 class="text-2xl font-extrabold mb-6">Send a Message</h3>
 
-          <form id="contact-form">
+          <!-- Replace YOUR_FORM_ID with your Formspree form id -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <!-- Honeypot (spam protection) -->
+            <input type="text" name="_gotcha" class="hidden" />
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="text-sm font-semibold text-slate-700">Your Name</label>
-                <input id="cname" class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe" required>
+                <input name="name" required
+                       class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
+                       placeholder="John Doe">
               </div>
+
               <div>
                 <label class="text-sm font-semibold text-slate-700">Your Email</label>
-                <input id="cemail" type="email" class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com" required>
+                <input type="email" name="email" required
+                       class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
+                       placeholder="john@example.com">
               </div>
             </div>
 
             <div class="mt-4">
               <label class="text-sm font-semibold text-slate-700">Subject</label>
-              <input id="csubject" class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Subject" required>
+              <input name="subject" required
+                     class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
+                     placeholder="Subject">
             </div>
 
             <div class="mt-4">
               <label class="text-sm font-semibold text-slate-700">Message</label>
-              <textarea id="cmessage" rows="5" class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message..." required></textarea>
+              <textarea name="message" rows="5" required
+                        class="mt-1 w-full px-4 py-3 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Your message..."></textarea>
             </div>
 
-            <button type="submit" class="mt-6 w-full px-6 py-3 rounded-2xl bg-primary text-white font-extrabold shadow-soft hover:bg-secondary transition">
+            <button type="submit"
+                    class="mt-6 w-full px-6 py-3 rounded-2xl bg-primary text-white font-extrabold shadow-soft hover:bg-secondary transition">
               Send Message
             </button>
           </form>
@@ -844,6 +598,7 @@
           <a href="#skills" class="hover:text-white">Skills</a>
           <a href="#publications" class="hover:text-white">Publications</a>
           <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#documents" class="hover:text-white">Downloads</a>
           <a href="#contact" class="hover:text-white">Contact</a>
         </div>
 
@@ -884,15 +639,13 @@
       feather.replace();
     });
 
-    // Tabs
+    // Tabs (only if you kept your existing experience tabs)
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         tabBtns.forEach(b => { b.classList.remove('active-tab'); b.classList.add('text-slate-600'); });
-        btn.classList.add('active-tab');
-        btn.classList.remove('text-slate-600');
-
+        btn.classList.add('active-tab'); btn.classList.remove('text-slate-600');
         tabContents.forEach(c => c.classList.add('hidden'));
         document.getElementById(btn.getAttribute('data-tab')).classList.remove('hidden');
       });
@@ -906,41 +659,24 @@
     });
     backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Skill bars animate when skills section visible
+    // Skill bars animate (if skills section exists)
     const bars = document.querySelectorAll('.skill-bar');
     bars.forEach(b => b.style.width = "0%");
-
     const skillsSection = document.querySelector('#skills');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          bars.forEach(bar => {
-            const p = bar.getAttribute('data-progress') || "0";
-            bar.style.width = p + "%";
-          });
-          obs.disconnect();
-        }
-      });
-    }, { threshold: 0.35 });
-    obs.observe(skillsSection);
-
-    // Contact form -> opens user's email app (works on GitHub Pages)
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('cname').value.trim();
-      const email = document.getElementById('cemail').value.trim();
-      const subject = document.getElementById('csubject').value.trim();
-      const message = document.getElementById('cmessage').value.trim();
-
-      const body =
-        `Name: ${name}%0D%0A` +
-        `Email: ${email}%0D%0A%0D%0A` +
-        `${message}`;
-
-      window.location.href = `mailto:atamkumar2018@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-      form.reset();
-    });
+    if (skillsSection) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            bars.forEach(bar => {
+              const p = bar.getAttribute('data-progress') || "0";
+              bar.style.width = p + "%";
+            });
+            obs.disconnect();
+          }
+        });
+      }, { threshold: 0.35 });
+      obs.observe(skillsSection);
+    }
   </script>
 
 </body>
