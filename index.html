@@ -116,84 +116,100 @@
   </nav>
 
   <!-- Hero -->
-  <header class="pt-14 pb-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-7" data-aos="fade-right">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 shadow-soft text-sm">
-            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-            Available for research collaboration • PhD applications
+  <!-- Hero (UPDATED: no document chips here, adds Research Focus + Methodology) -->
+<header class="pt-14 pb-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- Left -->
+      <div class="lg:col-span-7" data-aos="fade-right">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 shadow-soft text-sm">
+          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+          Available for research collaboration • PhD applications
+        </div>
+
+        <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
+          Hi, I’m <span class="gradient-text">Atam Kumar Menghwar</span>
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
+          Industrial &amp; Management Engineer specializing in smart manufacturing, quality
+          management, and digital transformation with a passion for research and innovation.
+        </p>
+
+        <!-- Buttons (ONLY primary actions) -->
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#contact" class="px-6 py-3 rounded-2xl bg-primary text-white font-semibold shadow-soft hover:shadow-soft2 transition">
+            Contact Me
+          </a>
+          <a href="#publications" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
+            View Publications
+          </a>
+          <a href="/projects/Atam_CV.pdf" target="_blank" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
+            Download CV
+          </a>
+        </div>
+
+        <!-- Research Focus -->
+        <div class="mt-9 p-6 rounded-3xl bg-white/80 border border-slate-200 shadow-soft">
+          <div class="flex items-center gap-2">
+            <div class="h-10 w-10 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="target" class="text-primary"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900">Research Focus</h3>
           </div>
 
-          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-            Hi, I’m <span class="gradient-text">Atam Kumar Menghwar</span>
-          </h1>
-
-          <p class="mt-4 text-lg text-slate-700 leading-relaxed">
-            Industrial &amp; Management Engineer specializing in smart manufacturing, quality management,
-            and digital transformation with a passion for research and innovation.
-          </p>
-
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#contact" class="px-6 py-3 rounded-2xl bg-primary text-white font-semibold shadow-soft hover:shadow-soft2 transition">
-              Contact Me
-            </a>
-            <a href="#publications" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-              View Publications
-            </a>
-
-            <!-- FIXED: absolute path so it never breaks -->
-            <a href="/projects/Atam_CV.pdf" target="_blank" class="px-6 py-3 rounded-2xl bg-white border border-slate-200 font-semibold text-slate-800 hover:border-slate-300 shadow-soft transition">
-              Download CV
-            </a>
-          </div>
-
-          <!-- NEW: quick access to all PDFs (open in new tab) -->
-          <div class="mt-5 flex flex-wrap gap-2">
-            <a href="/projects/Publications.pdf" target="_blank" class="px-3 py-2 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300 shadow-soft inline-flex items-center gap-2">
-              <i data-feather="file-text" class="w-4 h-4"></i> Publications
-            </a>
-            <a href="/projects/Internships_Jobs.pdf" target="_blank" class="px-3 py-2 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300 shadow-soft inline-flex items-center gap-2">
-              <i data-feather="briefcase" class="w-4 h-4"></i> Internships &amp; Jobs
-            </a>
-            <a href="/projects/Short_Courses.pdf" target="_blank" class="px-3 py-2 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300 shadow-soft inline-flex items-center gap-2">
-              <i data-feather="award" class="w-4 h-4"></i> Short Courses
-            </a>
-            <a href="/projects/Seminars_Webinars.pdf" target="_blank" class="px-3 py-2 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300 shadow-soft inline-flex items-center gap-2">
-              <i data-feather="video" class="w-4 h-4"></i> Seminars &amp; Webinars
-            </a>
-            <a href="/projects/Thesis_Description.pdf" target="_blank" class="px-3 py-2 rounded-2xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300 shadow-soft inline-flex items-center gap-2">
-              <i data-feather="book-open" class="w-4 h-4"></i> Thesis Description
-            </a>
-          </div>
-
-          <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
-              <div class="text-sm text-slate-500">Focus</div>
-              <div class="font-bold">Digital Twins &amp; Causal Modeling</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
-              <div class="text-sm text-slate-500">Tools</div>
-              <div class="font-bold">TimescaleDB • Grafana • XGBoost</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft">
-              <div class="text-sm text-slate-500">Research</div>
-              <div class="font-bold">Sustainability (Energy)</div>
-            </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Digital Twins for Sustainable Manufacturing</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Smart Manufacturing Systems (Industry 4.0 &amp; Industry 5.0)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Energy-Efficient and Sustainable Decision-Making</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Cyber-Physical Systems (CPS)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">AI-Driven Manufacturing Intelligence</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Inference in Industrial Systems</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Digital Transformation of Manufacturing and Healthcare</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Predictive Maintenance and Remaining Useful Life (RUL)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Smart Healthcare Systems and Human–Digital Twins</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Digital Supply Chain Management and Logistics Optimization</span>
           </div>
         </div>
 
-        <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
-          <div class="relative">
-            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/25 to-indigo-500/20 blur-2xl"></div>
-            <div class="relative bg-white p-2 rounded-[2rem] shadow-soft2 border border-slate-200">
-              <img src="atampc.jpeg" alt="Atam Kumar" class="w-72 h-72 rounded-[1.6rem] object-cover">
+        <!-- Preferred Methodology -->
+        <div class="mt-5 p-6 rounded-3xl bg-white/80 border border-slate-200 shadow-soft">
+          <div class="flex items-center gap-2">
+            <div class="h-10 w-10 rounded-2xl bg-blue-50 flex items-center justify-center">
+              <i data-feather="cpu" class="text-primary"></i>
             </div>
+            <h3 class="text-lg font-extrabold text-slate-900">Preferred Methodology</h3>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Digital Twin Framework (CDTF) Development</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Real-Time Data Acquisition and Time-Series Databases (TimescaleDB)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Data Visualization and Monitoring (Grafana)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Machine Learning Models (XGBoost, Predictive Analytics)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Causal Modeling and Inference Techniques</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Ordinary Least Squares (OLS) Regression</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Regression Diagnostics (Residual Analysis, Q–Q Plots, Histograms)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Multicollinearity Analysis (Variance Inflation Factor – VIF)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Autocorrelation Testing (Durbin–Watson Test)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Robust Estimation (Newey–West HAC Corrections)</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Survey-Based Quantitative Research</span>
+            <span class="px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm font-semibold text-slate-700">Statistical Analysis (Correlation, ANOVA, Regression Modeling)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right (image) -->
+      <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/25 to-indigo-500/20 blur-2xl"></div>
+          <div class="relative bg-white p-2 rounded-[2rem] shadow-soft2 border border-slate-200">
+            <img src="atampc.jpeg" alt="Atam Kumar" class="w-72 h-72 rounded-[1.6rem] object-cover">
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- NEW: Documents Section (all your PDFs) -->
   <section id="documents" class="py-20 bg-white">
@@ -271,7 +287,7 @@
               <i data-feather="book-open" class="text-primary"></i>
             </div>
             <div>
-              <div class="text-lg font-extrabold">Thesis Description</div>
+              <div class="text-lg font-extrabold">Mater's Thesis Description</div>
               <div class="text-sm text-slate-600">Thesis_Description.pdf</div>
             </div>
           </div>
